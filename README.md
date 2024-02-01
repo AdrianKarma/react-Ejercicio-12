@@ -1,8 +1,23 @@
-# React + Vite
+# Ejercicio 12 de React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##
+Web de noticias v2 - Dificultad:  🟢🟡
 
-Currently, two official plugins are available:
+Modifica la web anterior permitiendo que el usuario seleccione el país y la categoría de las noticias que quiere ver.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##
+
+
+>[!NOTE]
+Modo de uso
+Lineas para clonar y correr el proyecto:
+
+- `git clone`
+- `npm install`
+- `npm start`
+
+##
+ >[!IMPORTANT]
+Link Netlify:
+https://react-tp-12-adrian-chanampa.netlify.app/
+
