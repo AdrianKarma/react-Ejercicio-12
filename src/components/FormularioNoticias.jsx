@@ -9,7 +9,7 @@ const FormularioNoticias = () => {
     //pub_37483ff3d4d2ec0c099a81f2f3715e4f4d1b0
     const apiKey = "pub_37483ff3d4d2ec0c099a81f2f3715e4f4d1b0"
     const [noticias, setNoticias] =useState ([])
-    const [categoria, setCategoria] = useState("food");
+    const [categoria, setCategoria] = useState("business");
     const [pais, setPais] = useState("us");
 
 useEffect(()=>{
@@ -39,8 +39,7 @@ useEffect(()=>{
             <Form.Select onChange={handleChange} aria-label="Default select example" value={categoria}>
      
         <option >Elgige una categoria</option>
-       <option value="business">Negocios</option>
-       <option value="crime">Crimen</option>
+       <option value="business">Negocios</option>       
        <option value="food">Comida</option>
        <option value="technology">Tecnologia</option>
        <option value="politics">Politica</option>
@@ -49,8 +48,11 @@ useEffect(()=>{
      <Form.Select onChange={handleChange2} aria-label="Default select example" value={pais}>
      
      <option >Elgige una categoria</option>
-    <option value="ar">argentina</option>
-    <option value="us">eeuu</option>
+    <option value="ar">Argentina</option>
+    <option value="us">Estados Unidos</option>
+    <option value="pt">Portugal</option>
+    <option value="es">España</option>
+    <option value="jp">Japon</option>
  
   </Form.Select>
      </h1>
