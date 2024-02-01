@@ -5,26 +5,32 @@ import ListaNoticias from './ListaNoticias';
 
 
 const FormularioNoticias = () => {
-    const apiKey = "pub_363241281d1aac4e63ea34d1f2c239bbb99df"
+     //pub_374711e79b54a5d8e28ce262a2ae770ff0fea
+    //pub_37483ff3d4d2ec0c099a81f2f3715e4f4d1b0
+    const apiKey = "pub_37483ff3d4d2ec0c099a81f2f3715e4f4d1b0"
     const [noticias, setNoticias] =useState ([])
-    const [categoria, setCategoria] = useState("politics");
+    const [categoria, setCategoria] = useState("food");
+    const [pais, setPais] = useState("us");
 
 useEffect(()=>{
     consultarAPI();
     
-    },[categoria]);
+    },[categoria, pais]);
     
     const consultarAPI = async()=>{
-    const respuesta = await fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&language=es&category=${categoria} `)
-    //pub_363241281d1aac4e63ea34d1f2c239bbb99df
-    //pub_374711e79b54a5d8e28ce262a2ae770ff0fea
-    //pub_37483ff3d4d2ec0c099a81f2f3715e4f4d1b0
+    const respuesta = await fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&category=${categoria}&country=${pais}`)
+   
     const datos = await respuesta.json()
     console.log(datos)
     setNoticias(datos.results)
     }
     const handleChange = (e) => {
         setCategoria(e.target.value);
+       
+      };
+      const handleChange2 = (e) => {
+        
+        setPais(e.target.value);
       };
     return (
         <div>
@@ -40,6 +46,13 @@ useEffect(()=>{
        <option value="politics">Politica</option>
        <option value="sports">Deportes</option>
      </Form.Select>
+     <Form.Select onChange={handleChange2} aria-label="Default select example" value={pais}>
+     
+     <option >Elgige una categoria</option>
+    <option value="ar">argentina</option>
+    <option value="us">eeuu</option>
+ 
+  </Form.Select>
      </h1>
       </section>
 
