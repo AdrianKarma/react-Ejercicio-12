@@ -1,0 +1,26 @@
+.CardNoticia{
+  width: 450px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: lightgrey;
+}
+
+.Master{display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+  textarea { resize: none;
+  scroll-behavior: unset; }
+.imagenNoticia{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.tituloNoticia{
+  font-Weight: bold;
+}
+
+.CardBorde{
+background-color: grey;
+}
